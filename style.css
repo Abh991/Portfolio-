@@ -193,7 +193,7 @@ button:nth-child(2):hover {
 
 .circle:nth-child(2) {
     width: 30rem;
-    background-image: url("WhatsApp Image 2025-04-11 at 23.30.32_ad045cea.jpg");
+    background-image: url("w.jpg");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -506,4 +506,5 @@ button:nth-child(2):hover {
 .skills-list li:hover {
     transform: translateY(-8px);
     box-shadow: 0 0 15px rgba(93, 185, 238, 0.6);
+
 }
