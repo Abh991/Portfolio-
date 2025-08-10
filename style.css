@@ -506,69 +506,6 @@ button:nth-child(2):hover {
 .skills-list li:hover {
     transform: translateY(-8px);
     box-shadow: 0 0 15px rgba(93, 185, 238, 0.6);
-
-}
-/* ================= MOBILE VIEW FIXES ================= */
-@media (max-width: 768px) {
-    header .navlist {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .about-section {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .left-container, 
-    .right-container {
-        width: 100%;
-        text-align: center;
-    }
-
-    .left-container .icons {
-        justify-content: center;
-    }
-
-    .btn-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .section {
-        padding: 40px 20px;
-    }
-
-    .skills-list {
-        justify-content: center;
-    }
-
-    .skills-list li {
-        width: 100px; /* smaller square boxes */
-        height: 100px;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .skills-list li img {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1, h2 {
-        font-size: 1.5rem;
-    }
-
-    .intro {
-        font-size: 1rem;
-    }
-
-    .detail {
-        font-size: 0.9rem;
-    }
 }
 @media (max-width: 767px) {
     header .navlist {
@@ -579,13 +516,21 @@ button:nth-child(2):hover {
 
     .about-section {
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        padding: 30px 15px;
+        padding: 20px;
     }
+
 
     .about-section .left-container,
     .about-section .right-container {
         width: 100%;
+    }
+    .about-section .right-container img {
+        width: 200px; /* Adjust as needed */
+        height: auto;
+        border-radius: 50%;
+        margin-top: 20px;
     }
 
     .about-section h1 {
@@ -642,4 +587,3 @@ button:nth-child(2):hover {
         width: 100%;
     }
 }
-
