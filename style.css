@@ -1,0 +1,509 @@
+/* ===== Existing CSS (unchanged) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* ===== Navbar ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.navlist {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+.navlist li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navlist li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: #5dB9EE;
+    transition: width 0.3s ease;
+}
+
+.navlist li a:hover {
+    color: #5dB9EE;
+}
+
+.navlist li a:hover::after {
+    width: 100%;
+}
+
+/* ===== Section Layout ===== */
+.section {
+    min-height: 100vh;
+    padding: 6rem 4rem 4rem;
+}
+
+.section:nth-child(even) {
+    background-color: #2b2b2b;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #5dB9EE;
+    text-align: center;
+}
+
+/* ===== About Section ===== */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.left-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #262525;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.icons a {
+    color: #bbb;
+    font-size: 1.7rem;
+    transition: 0.3s ease;
+}
+
+.icons a:hover {
+    background: linear-gradient(#fff, #3877ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+}
+
+.content {
+    margin-left: 3rem;
+}
+
+.content .intro {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.content .intro span {
+    color: #5dB9EE;
+}
+
+.content h1 {
+    font-size: 3rem;
+    color: #5dB9EE;
+    margin-top: 0.5rem;
+}
+
+.content .detail {
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1rem 0 2rem;
+    line-height: 1.8rem;
+}
+
+.btn-container button {
+    border: 0.1rem solid #5dB9EE;
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:nth-child(1) {
+    background: #5dB9EE;
+    color: #262525;
+}
+
+button:nth-child(2) {
+    background: transparent;
+    color: #5dB9EE;
+    margin-left: 1rem;
+}
+
+button:nth-child(1):hover {
+    background: transparent;
+    color: #5dB9EE;
+}
+
+button:nth-child(2):hover {
+    background: #5dB9EE;
+    color: #262525;
+}
+
+/* ===== Design Circles ===== */
+.design .circle {
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.circle:nth-child(1) {
+    background: linear-gradient(90deg, transparent 50%, #262525 50%);
+    width: 38rem;
+}
+
+.circle:nth-child(2) {
+    width: 30rem;
+    background-image: url("WhatsApp Image 2025-04-11 at 23.30.32_ad045cea.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 1rem #fff;
+}
+
+/* ===== Education ===== */
+.education-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.edu-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #bbb;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.edu-details {
+    padding: 18px;
+    text-align: center;
+}
+
+.edu-details h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #3877ff;
+}
+
+.edu-details p {
+    margin: 4px 0;
+    color: #262525;
+    font-size: 1rem;
+}
+.edu-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(93, 185, 238, 0.3);
+    border: 2px solid #5dB9EE;
+}
+
+/* ===== Projects ===== */
+.project-card {
+    background: #262525;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(93, 185, 238, 0.6);
+}
+
+.project-card h3 {
+    color: #5dB9EE;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Skills ===== */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li img {
+    width: 24px;
+    height: 24px;
+}
+
+.skills-list li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(93, 185, 238, 0.6);
+}
+
+/* ===== Contact ===== */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+.contact-section button {
+    background: #5dB9EE;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #262525;
+    transition: 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: transparent;
+    border: 1px solid #5dB9EE;
+    color: #5dB9EE;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .left-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navlist {
+        gap: 1.5rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding: 4rem 2rem;
+    }
+
+    .navlist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navlist li a {
+        font-size: 0.9rem;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-container button {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* ===== Added Skill Card Styles ===== */
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+}
+
+.skill-card {
+    background: #fff no-repeat center left 10px;
+    background-size: 24px 24px;
+    padding: 10px 15px 10px 40px; /* left padding for icon space */
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* Icons from CDN */
+.skill-card.html {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg');
+}
+.skill-card.css {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg');
+}
+.skill-card.js {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg');
+}
+.skill-card.react {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg');
+}
+.skill-card.node {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg');
+}
+.skill-card.java {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg');
+}
+.skill-card.spring {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg');
+}
+.skill-card.mysql {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg');
+}
+.skill-card.mongodb {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg');
+}
+.skill-card.flutter {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg');
+}
+.skill-card.firebase {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg');
+}
+.skill-card.git {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg');
+}
+.skill-card.aws {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg');
+}
+.skill-card.gcp {
+    background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg');
+}
+.skills-row {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.skills-list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    border: 2px solid #5dB9EE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 12px;
+}
+
+.skills-list li span {
+    font-size: 1.1rem;
+    color: #262525;
+    font-weight: 600;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.skills-list li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px rgba(93, 185, 238, 0.6);
+}

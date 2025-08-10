@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhay's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <ul class="navlist">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+    <script>
+    window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const aboutSection = document.querySelector('#about');
+    const aboutBottom = aboutSection.offsetTop + aboutSection.offsetHeight;
+
+    if (window.scrollY > aboutBottom - 100) {
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        header.style.transform = 'translateY(0)';
+    }
+});
+</script>
+    <section id="about" class="section about-section">
+        <div class="left-container">
+            <div class="icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/abhay-chavan-5017b325a/" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="content">
+                <p class="intro">Hi! I Am <span>Chavan Abhay</span></p>
+                <h1>Java Full Stack Developer</h1>
+                <p class="detail">I am a passionate Java Full Stack Developer with experience in Spring Boot, 
+                    PostgreSQL, MongoDB, and MERN stack. I love building projects that solve real-world problems.</p>
+                <div class="btn-container">
+                    <a href="y.pdf" download>
+                        <button type="button">Download CV</button>
+                    </a>
+                    
+                    <button onclick="document.querySelector('#project').scrollIntoView({behavior:'smooth'})">View Projects</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-container"></div>
+        <div class="design">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </section>
+
+
+    <section id="education" class="section">
+    <h2>Education</h2>
+    <div class="education-cards" style="display: flex; gap: 2rem; justify-content: center;">
+        <div class="edu-box">
+            <img src="sunshine.jpg" alt="School" class="edu-img">
+            <div class="edu-details">
+                <h3>Sun-Shine English School</h3>
+                <p>SSC - 86.20%</p>
+                <p>Year: 2019</p>
+            </div>
+        </div>
+        <div class="edu-box">
+            <img src="z.jpg" alt="Diploma College" class="edu-img">
+            <div class="edu-details">
+                <h3>Vishweshwarayya Institute of Engineering and Technology</h3>
+                <p>Diploma in Computer Science - 87.09%</p>
+                <p>Year: 2022</p>
+            </div>
+        </div>
+        <div class="edu-box">
+            <img src="x.jpg" alt="Engineering College" class="edu-img">
+            <div class="edu-details">
+                <h3>Skn Sinhgad Institute of Technology and Science</h3>
+                <p>B.E in Computer Science - CGPA: 8.06</p>
+                <p>Year: 2025</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+     <section id="project" class="section">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>SKNSITS One Community</h3>
+            <p>A college community app for students to engage, share notes, and participate in activities.</p>
+        </div>
+        <div class="project-card">
+            <h3>SmartCare: AI-Driven Patient Monitoring System</h3>
+            <p>Java Full Stack application with Spring Boot backend, PostgreSQL, JWT authentication, and AI-based patient monitoring.</p>
+        </div>
+        <div class="project-card">
+            <h3>Cash Vault</h3>
+            <p>A MERN stack-based digital payment wallet app with authentication, money transfer, and transaction history.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+    <h2>My Skills</h2>
+    <div class="skills-row">
+        <ul class="skills-list">
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                <span>HTML</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                <span>CSS</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <span>JavaScript</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js">
+                <span>React.js</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                <span>Node.js</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                <span>Java</span>
+            </li>
+        </ul>
+        <ul class="skills-list">
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot">
+                <span>Spring Boot</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                <span>MySQL</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP">
+                <span>GCP</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
+                <span>AWS</span>
+            </li>
+            <li>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                <span>Git</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    <section id="contact" class="section contact-section">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</body>
+</html>
